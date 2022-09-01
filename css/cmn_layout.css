@@ -1,0 +1,144 @@
+@charset "UTF-8";
+
+/* ----------------------------------------------------------------------------------------------------
+ *  1.基本情報
+ * --------------------------------------------------------------------------------------------------*/
+
+body {
+    line-height: 1.8;
+    margin-bottom: 150px;
+    background: #fff;
+    color: #000000;
+    font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
+    font-size: 14px;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    transition: 0.3s;
+    opacity: 0.7;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    display: block;
+    clear: both;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    content: ".";
+}
+
+ul li {
+    list-style: none;
+}
+
+.pc {
+    display: block;
+}
+
+.sp {
+    display: none;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+#wrapper {
+    width: 100%;
+}
+
+.inner {
+    width: 1000px;
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/* ----------------------------------------------------------------------------------------------------
+ *  Header
+ * --------------------------------------------------------------------------------------------------*/
+
+header .inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 0 5px;
+}
+
+
+/* ----------------------------------------------------------------------------------------------------
+ *  Footer
+ * --------------------------------------------------------------------------------------------------*/
+
+footer {
+    padding: 15px 0 20px;
+    border-top: 1px solid #000000;
+}
+
+footer p {
+    font-size: 10px;
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1300px) {
+    .inner {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    header .inner {
+        width: 100%;
+        padding: 13px 15px 5px;
+    }
+}
+
+@media only screen and (max-width:767.9px) {
+    .pc {
+        display: none;
+    }
+
+    .sp {
+        display: block;
+    }
+
+    .inner {
+        width: 100%;
+        padding: 0 24px;
+    }
+
+    body {
+        margin-bottom: 80px;
+    }
+
+    header .inner {
+        width: 100%;
+        padding: 13px 15px 5px;
+    }
+
+    header .h-info img {
+        float: right;
+        width: 80%;
+    }
+
+    /* footer */
+
+    footer {
+        padding: 25px;
+    }
+
+    footer p {
+        font-size: calc(15/ 750 * 100vw);
+    }
+}
